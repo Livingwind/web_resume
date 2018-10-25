@@ -32,7 +32,7 @@ export default class App extends Component {
       <Container>
         <Jumbotron className='text-center'>
           <h4>Christopher William Westerman</h4>
-          <h5 style={width < 768?{fontSize:'5vw'}:{}}>Phone: (970)237-0725{sm_break(' - ')}Email: Westerman.Christopher@gmail.com</h5>
+          <h5 style={width < 550?{fontSize:'5vw'}:{}}>Phone: (970)237-0725{sm_break(' - ')}Email: Westerman.Christopher@gmail.com</h5>
           <a href={"https://github.com/Livingwind/"}>https://github.com/Livingwind</a>
         </Jumbotron>
         <Row>
