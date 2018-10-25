@@ -2,13 +2,15 @@ import React, {Component} from 'react'
 import { Card, CardHeader, CardBody } from 'reactstrap'
 
 export default class Skills extends Component {
+  constructor(props){super(props);}
   render() {
+    const width = this.props.width;
     return (
       <Card>
         <CardHeader>Skills</CardHeader>
         <CardBody>
           Languages:
-          <ul className={"col3"}>
+          <ul className={'col2'}>
             <li>C</li>
             <li>Modern C++</li>
             <li>SQL</li>
@@ -17,7 +19,7 @@ export default class Skills extends Component {
             <li>Python</li>
           </ul>
           Utilities:
-          <ul className={"col3"}>
+          <ul className={width < 768?'col2':'col3'}>
             <li>Git</li>
             <li>DockerIO</li>
             <li>Jira/Zenhub</li>
