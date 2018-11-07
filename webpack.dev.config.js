@@ -1,28 +1,27 @@
-const path = require('path')
-const webpack = require('webpack')
+const path = require('path');
+const webpack = require('webpack');
 
-const dev_port = 31401;
-const server_port = 31400;
+const dev_port = 8080;
 
 module.exports = {
   devtool: 'source-map',
   devServer: {
     port: dev_port,
+    publicPath: '/',
+    contentBase: './public',
     open: true,
     hot: true
   },
   entry: [
     'babel-polyfill',
+    'react-hot-loader/patch',
     './src/client/entry.jsx'
   ],
   output: {
-    path: path.join(__dirname, '/'),
+    path: path.join(__dirname, 'public'),
     filename: 'bundle.js',
   },
   plugins: [
-    new webpack.DefinePlugin({
-        'process.env.dev': server_port
-      }),
     new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin()
   ],

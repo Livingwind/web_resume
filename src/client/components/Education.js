@@ -3,7 +3,11 @@ import { Card, CardHeader, CardBody } from 'reactstrap';
 import './columns.css'
 
 export default class Education extends Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
+    const width = this.props.width;
    return (
      <Card>
        <CardHeader><b>Education</b></CardHeader>
@@ -27,7 +31,7 @@ export default class Education extends Component {
            <li>Privately worked on developing a TCP server in C++17 and Boost ASIO</li>
          </ul>
          Relevant Coursework:
-         <ul className={"col2"}>
+         <ul className={width < 768 ? '':'col2'}>
            <li>Software Development (C++)</li>
            <li>Operating Systems (Java, C, C++)</li>
            <li>Computer Organization (Assembly, C)</li>
