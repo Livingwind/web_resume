@@ -6,6 +6,8 @@ const dev_port = 8080;
 module.exports = {
   devtool: 'source-map',
   devServer: {
+    publicPath: '/',
+    contentBase: './public',
     port: dev_port,
     publicPath: '/',
     contentBase: './public',
