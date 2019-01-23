@@ -1,7 +1,7 @@
 {
   "scripts": {
     "bundle": "webpack --config ./webpack.prod.config.js --progress --colors",
-    "server": "node src/server/index.js",
+    "server": "cross-env PORT=80 node src/server/index.js",
     "dev": "webpack-dev-server --config ./webpack.dev.config.js",
     "deploy": "npm run bundle && npm run server",
     "test": "jest"
