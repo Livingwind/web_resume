@@ -7,4 +7,4 @@ app.use(express.static('dist'));
 app.use(favicon('favicon.ico'));
 app.get('/', (req, res) => { res.sendFile('dist/index.html')});
 
-app.listen(31450, () => console.log('Listening on port 31450'));
+app.listen(process.env.PORT, () => console.log('Listening on port', process.env.PORT));

@@ -8,9 +8,6 @@ module.exports = {
   devServer: {
     publicPath: '/',
     contentBase: './public',
-    port: dev_port,
-    publicPath: '/',
-    contentBase: './public',
     open: true,
     hot: true
   },
